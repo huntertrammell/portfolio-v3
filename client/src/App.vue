@@ -1,31 +1,50 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">Hunter Trammell</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <router-link class="nav-link" to="/">Home</router-link>
+            </li>
+            <li class="nav-item">
+                <router-link class="nav-link" to="/about">About</router-link>
+            </li>
+            <li class="nav-item">
+                <router-link class="nav-link" to="/portfolio">Portfolio</router-link>
+            </li>
+            <li class="nav-item">
+                <router-link class="nav-link" to="/contact">Contact</router-link>
+            </li>
+            </ul>
+        </div>
+      </nav>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+    overflow: hidden;
+    height: 100%;
 }
-#nav {
-  padding: 30px;
+body {
+    height: 100%;
+    overflow: auto;
+    background-image: linear-gradient(to top right, #1ed9ea, #8518a5);
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.navbar-brand, .nav-link {
+    color: white !important;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.nav-link:hover {
+    text-shadow: 2px 2px 4px black;
+}
+@media screen and (max-width: 767px) {
+    .navbar{
+        padding-bottom: 150px;
+    }
 }
 </style>
