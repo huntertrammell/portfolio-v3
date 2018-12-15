@@ -42,9 +42,4 @@ body {
 .nav-link:hover {
     text-shadow: 2px 2px 4px black;
 }
-@media screen and (max-width: 767px) {
-    .navbar{
-        padding-bottom: 150px;
-    }
-}
 </style>

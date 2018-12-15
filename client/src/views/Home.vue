@@ -139,6 +139,10 @@ export default {
     .crop-cont-sm{
         display: none;
     }
+    .home {
+      padding-top: 150px;
+    }
 }
+
 </style>
 
