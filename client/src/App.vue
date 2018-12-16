@@ -33,7 +33,7 @@ html {
 }
 body {
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     background-image: linear-gradient(to top right, #1ed9ea, #8518a5);
 }
 .navbar-brand, .nav-link {

@@ -91,7 +91,7 @@ export default {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: rgb(255, 99, 132);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .project-item:hover .overlay {
