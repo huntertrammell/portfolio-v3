@@ -9,7 +9,7 @@
                     <img class="profilePic" src="assets/images/hunterPic.png" alt="Hunter Trammell">
                 </div>
                 <h4 class="title-text pt-4 crop-cont-sm">
-                    <a class="btn btn-projects" href="/about">Get To Know Me</a>
+                    <router-link class="btn btn-projects" to="/about">Get To Know Me</router-link>
                 </h4>
             </div>
             <div class="col-lg col-sm-12 crop-cont-sm">
@@ -26,7 +26,7 @@
                 </div>
                 <h5 class="title-text caption animated pt-4 pb-4">Javascript</h5>
                 <h4 class="title-text pt-4">
-                    <a class="btn btn-projects" href="/portfolio">Explore Projects</a>
+                    <router-link class="btn btn-projects" to="/portfolio">Explore Projects</router-link>
                 </h4>
             </div>
             <div class="col-lg col-sm-12 crop-cont-sm">
@@ -36,7 +36,7 @@
                     <img class="profilePic" width="180" src="assets/images/mail.png" alt="Hunter Trammell">
                 </div>
                 <h4 class="title-text pt-4">
-                    <a class="btn btn-projects" href="/contact">Say Hello</a>
+                    <router-link class="btn btn-projects" to="/contact">Say Hello</router-link>
                 </h4>
             </div>
         </div>
@@ -116,7 +116,7 @@ export default {
     color: white;
     text-align: center;
     text-shadow: 2px 2px 4px black;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .sub-text {
     color: white;
@@ -128,6 +128,7 @@ export default {
     color: white;
     text-shadow: 2px 2px 4px black;
     background-color: #12639c;
+    font-family: 'Josefin Sans', sans-serif;
     box-shadow: 2px 2px 4px black;
 }
 .btn-projects:hover {

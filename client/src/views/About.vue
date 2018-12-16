@@ -71,7 +71,7 @@ import Chart from 'chart.js';
 export default {
     mounted() {
         Chart.defaults.global.defaultFontColor = 'white'
-        Chart.defaults.global.defaultFontFamily = "'Do Hyeon', sans-serif"
+        Chart.defaults.global.defaultFontFamily = "'Josefin Sans', sans-serif"
         var chart = this.$refs.chart;
         var ctx = chart.getContext("2d");
         var myChart = new Chart(ctx, {

@@ -38,6 +38,7 @@ body {
 }
 .navbar-brand, .nav-link {
     color: white !important;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .nav-link:hover {
     text-shadow: 2px 2px 4px black;

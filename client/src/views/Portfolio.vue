@@ -65,7 +65,7 @@ export default {
                 },
                 {
                     title: "Expense.",
-                    image: "assets/images/projects/expense.PNG",
+                    image: "assets/images/projects/expense.png",
                     url: "https://github.com/huntertrammell/Expense"
                 }
             ]
