@@ -6,7 +6,7 @@
         </p>
         <div class="row">
             <div class="col-md-9 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form">
+                <form id="contact-form" name="contact-form" action="https://formspree.io/hunterttrammell@gmail.com" method="POST">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="md-form mb-0">
@@ -38,11 +38,13 @@
 
                         </div>
                     </div>
+                    <div class="text-center text-md-left">
+                        <input type="submit" value="send" class="btn btn-projects" @click="sendMail()">
+                    </div>
                 </form>
-                <div class="text-center text-md-left">
-                    <button class="btn btn-projects">Send</button>
+                <div>
+                    <p id="mailSent"></p>
                 </div>
-                <div class="status"></div>
             </div>
             <div class="col-md-3 text-center">
                 <ul class="list-unstyled mb-0">
@@ -65,10 +67,16 @@
 
 <script>
 export default {
-
+    methods: {
+        sendMail: function(){
+            document.getElementById("mailSent").text("Thanks! I will respond as soon as I can.")
+        }
+    }
 }
 </script>
 
 <style>
-
+#mailSent {
+    color: red;
+}
 </style>
