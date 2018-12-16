@@ -2,11 +2,11 @@
   <div id="about" class="container-fluid about">
         <div class="row mb-4 mt-0 pt-0">
             <div class="col mx-4">
-                <p class="title-text text-center">
+                <h5 class="title-text text-center">
                     I am a Full-Stack Web Developer with a passion for crafting aesthetically pleasing user interfaces. 
                     Previous management history has attested that I am proficient working alone, with a team, and am comfortable taking lead in any situation. 
                     Enjoys graphic design and expanding personal knowledge to develop new perspectives on implementation and user interaction.
-                </p>
+                </h5>
             </div>
         </div>
         <div class="row">
@@ -80,7 +80,7 @@ export default {
                 labels: ['HTML', 'Javascript', 'CSS', 'Node.js', 'Express', 'Vue.js', 'MySQL', 'Firebase', 'MongoDB', 'React.js', 'Photoshop', 'Git'],
                 datasets: [{
                     label: 'Skill Level',
-                    data: [4, 3, 3, 3, 2, 3, 2, 3, 1, 1, 2, 3, 3],
+                    data: [4, 4, 4, 3, 2, 3, 2, 3, 1, 1, 2, 3, 3],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.4)',
                         'rgba(255, 99, 132, 0.4)',

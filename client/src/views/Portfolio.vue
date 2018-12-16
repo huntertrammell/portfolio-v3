@@ -1,13 +1,17 @@
 <template>
     <div class="projects">
         <div class="container">
-            <div class="project-grid mt-4">
+            <h4 class="title-text">Hover over a project to see the title, click the title to visit the repository on GitHub for further information/demo.</h4>
+            <div class="project-grid mt-4 mx-auto">
                 <div class="project-item m-1" 
-                v-for="project in projects">
-                    <a  :href="project.url">
-                        <h3 class="project-title text-white position-absolute text-center mx-auto mt-4 pt-4">{{ project.title }}</h3>
-                        <img :src="project.image" :alt="project.title" height="200px" width="200px">
-                    </a>
+                v-for="project in projects"
+                :key="project.title">
+                    <img :src="project.image" :alt="project.title" height="200px" width="200px">
+                    <div class="overlay">
+                        <div class="text">
+                            <a class="title-text" :href="project.url">{{ project.title }}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,20 +75,41 @@ export default {
 </script>
 
 <style>
-.project-title {
-    display: none;
-}
-.project-item:hover .project-title {
-    display:inline;
-}
-.project-item:hover img{
-    opacity: 0.2;
-}
 .project-item {
     height: 200px;
     width: 200px;
     position: relative;
     float: left;
-    background-color: aqua;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(255, 99, 132);
+}
+
+.project-item:hover .overlay {
+  opacity: 1;
+}
+a.title-text:hover {
+    text-decoration: none;
+    color:  white;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 </style>
