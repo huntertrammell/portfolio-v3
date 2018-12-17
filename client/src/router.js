@@ -11,23 +11,27 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
+      meta: { transitionName: "slide" }
     },
     {
       path: "/about",
       name: "about",
+      meta: { transitionName: "slide" },
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
       path: "/portfolio",
       name: "portfolio",
+      meta: { transitionName: "slide" },
       component: () =>
         import(/* webpackChunkName: "portfolio" */ "./views/Portfolio.vue")
     },
     {
       path: "/contact",
       name: "contact",
+      meta: { transitionName: "slide" },
       component: () =>
         import(/* webpackChunkName: "contact" */ "./views/Contact.vue")
     }

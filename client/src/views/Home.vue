@@ -83,7 +83,9 @@ export default {
 
 <style>
 .intro {
-    margin-top: 15%;
+    overflow: hidden !important;
+    position: relative;
+    top: 0;
 }
 .img-left {
     width: 10%;
@@ -107,7 +109,7 @@ export default {
 }
 .summary {
     position: relative;
-    top: -100px;
+    margin-top: 5%;
     padding-bottom: 10px;
     animation-delay: 250ms;
     animation-duration: 1.5s;
