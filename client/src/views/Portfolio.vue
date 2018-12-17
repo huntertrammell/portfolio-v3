@@ -2,7 +2,7 @@
     <div class="projects">
         <div class="container">
             <h4 class="title-text">Hover over a project to see the title, click the title to visit the repository on GitHub for further information/demo.</h4>
-            <div class="project-grid mt-4 mx-auto">
+            <div class="project-grid my-4 mx-auto">
                 <div class="project-item m-1" 
                 v-for="project in projects"
                 :key="project.title">
@@ -111,5 +111,15 @@ a.title-text:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .project-item img {
+        width: 90vw;
+        position: relative;
+        margin: auto;
+    }
+    .overlay {
+        width: 90vw;
+    }
 }
 </style>
