@@ -102,13 +102,13 @@ body {
   transform: translate(-2em, 0);
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #343a40; 
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 

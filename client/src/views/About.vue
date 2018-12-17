@@ -51,10 +51,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-sm-12">
+            <div class="col-lg-8 col-sm-12 mb-4">
                 <div class="card bg-transparent">
                     <h3 class="card-header bg-dark title-text">Skills</h3>
-                    <div class="card-body project-info">
+                    <div class="card-body graph-card project-info">
                         <div id="content" class="graph">
                             <canvas ref="chart"></canvas>
                         </div>
@@ -82,18 +82,18 @@ export default {
                     label: 'Skill Level',
                     data: [4, 4, 4, 3, 2, 3, 2, 3, 1, 1, 2, 3, 3],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)',
-                        'rgba(255, 99, 132, 0.4)'
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
@@ -181,11 +181,20 @@ export default {
     .about {
       padding-top: 25px;
     }
+    .graph-card {
+        overflow-x: scroll;
+    }
     .graph {
         position: relative !important;
-        overflow: scroll !important;
-        height: 100vh !important;
-        width: 100vw !important;
+        height: 500px !important;
+        width: 1000px !important;
+    }
+    canvas {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    ::-webkit-scrollbar {
+        height: 5px;
     }
 }
 </style>
