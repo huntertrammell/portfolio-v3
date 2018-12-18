@@ -31,54 +31,56 @@
   </div>
 </template>
 <script>
-const DEFAULT_TRANSITION = 'fade';
-    export default {
-        name: 'App',
-        data() {
-            return {
-            prevHeight: 0,
-            transitionName: DEFAULT_TRANSITION,
-            };
-        },
-        created() {
-            this.$router.beforeEach((to, from, next) => {
-                let transitionName = to.meta.transitionName || from.meta.transitionName;
+const DEFAULT_TRANSITION = "fade";
+export default {
+  name: "App",
+  data() {
+    return {
+      prevHeight: 0,
+      transitionName: DEFAULT_TRANSITION
+    };
+  },
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      let transitionName = to.meta.transitionName || from.meta.transitionName;
 
-                if (transitionName === 'slide') {
-                const toDepth = to.path.split('/').length;
-                const fromDepth = from.path.split('/').length;
-                transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-                }
+      if (transitionName === "slide") {
+        const toDepth = to.path.split("/").length;
+        const fromDepth = from.path.split("/").length;
+        transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
+      }
 
-                this.transitionName = transitionName || DEFAULT_TRANSITION;
+      this.transitionName = transitionName || DEFAULT_TRANSITION;
 
-                next();
-            });
-        },
-        methods: {
-            beforeLeave(element) {
-            this.prevHeight = getComputedStyle(element).height;
-            }
-        }
+      next();
+    });
+  },
+  methods: {
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
     }
+  }
+};
 </script>
 
 <style>
 html {
-    overflow: hidden;
-    height: 100%;
+  overflow: hidden;
+  height: 100%;
+  background-image: linear-gradient(to top right, #1ed9ea, #8518a5);
 }
 body {
-    height: 100%;
-    overflow-y: auto;
-    background-image: linear-gradient(to top right, #1ed9ea, #8518a5);
+  height: 100%;
+  overflow-y: auto;
+  background-color: transparent;
 }
-.navbar-brand, .nav-link {
-    color: white !important;
-    font-family: 'Josefin Sans', sans-serif;
+.navbar-brand,
+.nav-link {
+  color: white !important;
+  font-family: "Josefin Sans", sans-serif;
 }
 .nav-link:hover {
-    text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 4px black;
 }
 .slide-left-enter-active,
 .slide-left-leave-active,
@@ -105,12 +107,12 @@ body {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #343a40; 
+  background: #343a40;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 </style>

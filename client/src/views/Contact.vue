@@ -67,16 +67,18 @@
 
 <script>
 export default {
-    methods: {
-        sendMail: function(){
-            document.getElementById("mailSent").text("Thanks! I will respond as soon as I can.")
-        }
+  methods: {
+    sendMail: function() {
+      document
+        .getElementById("mailSent")
+        .text("Thanks! I will respond as soon as I can.");
     }
-}
+  }
+};
 </script>
 
 <style>
 #mailSent {
-    color: red;
+  color: red;
 }
 </style>
